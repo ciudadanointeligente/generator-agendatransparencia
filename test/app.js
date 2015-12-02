@@ -6,21 +6,19 @@ var helpers = require('yeoman-generator').test;
 describe('generator-agendatransparencia:app', function () {
   before(function (done) {
     helpers.run(path.join(__dirname, '../generators/app'))
-      .withOptions({
-            UserOrganization: 'ciudadanoi',
-            Repo: 'a_transparencia',
-            Title: 'Agenda Transparencia',
-            Slogan: 'Slogan',
-            ActionCall: 'Action call',
-            Twitter: 'ciudadanoi',
-            Facebook: 'ciudadanointeligente'
-    }).withPrompts({someAnswer: true})
-      .on('end', done);
+        .withPrompts({
+          UserOrganization: 'ciudadanoi',
+          Repo: 'a_transparencia',
+          Title: 'Agenda Transparencia',
+          Slogan: 'Slogan',
+          ActionCall: 'Action call',
+          Twitter: 'ciudadanoi',
+          Facebook: 'ciudadanointeligente'
+        }).on('end', done);
   });
-
-    it('creates files', function () {
-        assert.file([
-            'dummyfile.txt'
-        ]);
-    });
+  it('creates files', function () {
+    assert.file([
+      'a_transparencia/config.yml'
+    ]);
+  });
 });

@@ -12,17 +12,19 @@ module.exports = yeoman.generators.Base.extend({
       'Welcome to the luminous ' + chalk.red('generator-agendatransparencia') + ' generator!'
     ));
 
-    var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
+    var prompts = [
+      {type: 'confirm', name: 'UserOrganization', message: '', default: 'UserOrganization' },
+      {type: 'confirm', name: 'Repo', message: '', default: 'Repo' },
+      {type: 'confirm', name: 'Title', message: '', default: 'Title' },
+      {type: 'confirm', name: 'Slogan', message: '', default: 'Slogan' },
+      {type: 'confirm', name: 'ActionCall', message: '', default: 'ActionCall' },
+      {type: 'confirm', name: 'Twitter', message: '', default: 'Twitter' },
+      {type: 'confirm', name: 'Facebook', message: '', default: 'Facebook' }
+    ];
 
     this.prompt(prompts, function (props) {
       this.props = props;
       // To access props later use this.props.someOption;
-
       done();
     }.bind(this));
   },
@@ -36,5 +38,8 @@ module.exports = yeoman.generators.Base.extend({
 
   install: function () {
     this.installDependencies();
+  },
+  end: function () {
   }
+
 });
