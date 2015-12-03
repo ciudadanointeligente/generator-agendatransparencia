@@ -50,7 +50,11 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   install: function () {
-    this.installDependencies();
+    var elementDir = process.cwd() + '/' + this.props.Repo;
+    process.chdir(elementDir);
+    this.installDependencies({
+      npm: false
+    });
   },
   end: function () {
   }
