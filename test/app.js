@@ -15,12 +15,19 @@ describe('generator-agendatransparencia:app', function () {
           AmountOfCards: 5,
           Twitter: 'ciudadanoi',
           Facebook: 'ciudadanointeligente'
-        }).on('end', done);
+        }).on('end', function(){
+          process.chdir(process.cwd() + '/..');
+          done();
+        });
   });
   it('creates files', function () {
     assert.file([
       'a_transparencia/_config.yml',
-      'a_transparencia/bower.json'
+      'a_transparencia/bower.json',
+      // 'a_transparencia/favicon.ico',
+      // 'a_transparencia/meme.html',
+      // 'a_transparencia/quienes-somos.md',
+
     ]);
   });
 });
