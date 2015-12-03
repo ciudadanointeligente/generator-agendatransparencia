@@ -43,6 +43,17 @@ module.exports = yeoman.generators.Base.extend({
       this.props
     )
   },
+  createCards: function() {
+    for (var i=1; i < this.props.AmountOfCards + 1; i++) {
+      var context = this.props;
+      context.id = i;
+      this.fs.copyTpl(
+        this.templatePath('_cards/card.md'),
+        this.destinationPath(this.props.Repo + '/_cards/card-' + i + ".md"),
+        context
+      )
+    }
+  },
 
   writing: function () {
     this.createConfig();

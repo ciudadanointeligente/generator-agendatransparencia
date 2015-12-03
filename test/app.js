@@ -31,6 +31,15 @@ describe('generator-agendatransparencia:app', function () {
 
     ]);
   });
+  it('crea 5 cards', function () {
+    assert.file([
+      'a_transparencia/_cards/card-1.md',
+      'a_transparencia/_cards/card-2.md',
+      'a_transparencia/_cards/card-3.md',
+      'a_transparencia/_cards/card-4.md',
+      'a_transparencia/_cards/card-5.md'
+    ]);
+  })
   it('hace un commit', function (done) {
     open('a_transparencia').then(function(repo){
       branch = repo.getBranchCommit('gh-pages', function (a, commit) {
