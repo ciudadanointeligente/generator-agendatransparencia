@@ -12,13 +12,14 @@ describe('generator-agendatransparencia:app', function () {
           Title: 'Agenda Transparencia',
           Slogan: 'Slogan',
           ActionCall: 'Action call',
+          AmountOfCards: 5,
           Twitter: 'ciudadanoi',
           Facebook: 'ciudadanointeligente'
         }).on('end', done);
   });
   it('creates files', function () {
     assert.file([
-      'a_transparencia/config.yml'
+      'a_transparencia/_config.yml'
     ]);
   });
 });

@@ -13,13 +13,14 @@ module.exports = yeoman.generators.Base.extend({
     ));
 
     var prompts = [
-      {type: 'confirm', name: 'UserOrganization', message: '', default: 'UserOrganization' },
-      {type: 'confirm', name: 'Repo', message: '', default: 'Repo' },
-      {type: 'confirm', name: 'Title', message: '', default: 'Title' },
-      {type: 'confirm', name: 'Slogan', message: '', default: 'Slogan' },
-      {type: 'confirm', name: 'ActionCall', message: '', default: 'ActionCall' },
-      {type: 'confirm', name: 'Twitter', message: '', default: 'Twitter' },
-      {type: 'confirm', name: 'Facebook', message: '', default: 'Facebook' }
+      {type: 'confirm', name: 'UserOrganization', message: 'Tu usuario u organización en github?', default: 'ciudadanointeligente' },
+      {type: 'confirm', name: 'Repo', message: 'El repo', default: 'a_transparencia' },
+      {type: 'confirm', name: 'Title', message: 'El título?', default: 'Agenda Transparencia' },
+      {type: 'confirm', name: 'Slogan', message: 'El Slogan?', default: 'Todos los perritos se van al cielo' },
+      {type: 'confirm', name: 'ActionCall', message: 'Cual es el llamado a la acción?', default: 'Ayudalos a llegar al cielo' },
+      {type: 'confirm', name: 'AmountOfCards', message: 'Cuantas tarjetas deberían ser?', default: 9 },
+      {type: 'confirm', name: 'Twitter', message: 'ciudadanoi', default: 'Twitter' },
+      {type: 'confirm', name: 'Facebook', message: 'ciudadanointeligente', default: 'Facebook' }
     ];
 
     this.prompt(prompts, function (props) {
@@ -28,12 +29,20 @@ module.exports = yeoman.generators.Base.extend({
       done();
     }.bind(this));
   },
+  createConfig: function(){
+    this.fs.copyTpl(
+      this.templatePath('_config.yml'),
+      this.destinationPath(this.props.Repo + '/_config.yml'),
+      { title: this.props.Title }
+    )
+  },
 
   writing: function () {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
-    );
+    // this.fs.copy(
+    //   this.templatePath('dummyfile.txt'),
+    //   this.destinationPath('dummyfile.txt')
+    // );
+    this.createConfig()
   },
 
   install: function () {

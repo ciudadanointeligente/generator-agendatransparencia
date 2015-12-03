@@ -1,0 +1,22 @@
+# site settings
+title: <%= title %>
+email: prensa@ciudadanointeligente.org
+description: Descubre y fiscaliza las 9 medidas de la AgendaTransparencia que están en riesgo de no ser ley.
+baseurl: '//argentina.agendatransparencia.cl' #example: '/agendatransparencia'
+basedomain: argentina.agendatransparencia.cl #ciudadanointeligente.github.io
+analytics: 'UA-41822715-6'
+
+# social
+hashtag: AgendaTransparencia
+twitter_username: ciudadanoi
+twitter_txt: 'Yo opino del Informe Anticorrupción lo siguiente...'
+
+# build settings
+markdown: kramdown
+
+#herokuapp
+herokuapp: '//api.agendatransparencia.cl/proposals'
+
+collections:
+  cards:
+    output: true
