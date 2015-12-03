@@ -2,6 +2,7 @@
 var path = require('path');
 var assert = require('yeoman-assert');
 var helpers = require('yeoman-generator').test;
+var open = require("nodegit").Repository.open;
 
 describe('generator-agendatransparencia:app', function () {
   before(function (done) {
@@ -29,5 +30,12 @@ describe('generator-agendatransparencia:app', function () {
       // 'a_transparencia/quienes-somos.md',
 
     ]);
+  });
+  it('hace un commit', function (done) {
+    open('a_transparencia').then(function(repo){
+      branch = repo.getBranchCommit('gh-pages', function (a, commit) {
+        done()
+      })
+    });
   });
 });

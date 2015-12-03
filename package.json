@@ -29,7 +29,8 @@
     "gulp-mocha": "^2.0.0",
     "gulp-plumber": "^1.0.0",
     "gulp-nsp": "^2.1.0",
-    "gulp-coveralls": "^0.1.0"
+    "gulp-coveralls": "^0.1.0",
+    "nodegit": "~0.5.0"
   },
   "repository": "ciudadanointeligente/generator-agendatransparencia",
   "scripts": {

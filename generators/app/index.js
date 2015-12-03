@@ -57,6 +57,11 @@ module.exports = yeoman.generators.Base.extend({
     });
   },
   end: function () {
+    this.spawnCommand('git', ['init']);
+    this.spawnCommand('git', ['checkout', '-b', 'gh-pages']);
+    this.spawnCommand('git', ['remote', 'add', 'origin', this.repo]);
+    this.spawnCommand('git', ['add', '--all']);
+    this.spawnCommand('git', ['commit', '-m', '"initial commit from generator"']);
   }
 
 });
