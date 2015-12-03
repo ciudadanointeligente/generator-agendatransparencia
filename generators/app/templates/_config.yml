@@ -1,5 +1,5 @@
 # site settings
-title: <%= title %>
+title: <%= Title %>
 email: prensa@ciudadanointeligente.org
 description: Descubre y fiscaliza las 9 medidas de la AgendaTransparencia que están en riesgo de no ser ley.
 baseurl: '//argentina.agendatransparencia.cl' #example: '/agendatransparencia'

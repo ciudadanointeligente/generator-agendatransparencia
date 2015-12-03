@@ -19,7 +19,8 @@ describe('generator-agendatransparencia:app', function () {
   });
   it('creates files', function () {
     assert.file([
-      'a_transparencia/_config.yml'
+      'a_transparencia/_config.yml',
+      'a_transparencia/bower.json'
     ]);
   });
 });

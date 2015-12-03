@@ -29,20 +29,24 @@ module.exports = yeoman.generators.Base.extend({
       done();
     }.bind(this));
   },
-  createConfig: function(){
+  createConfig: function () {
     this.fs.copyTpl(
       this.templatePath('_config.yml'),
       this.destinationPath(this.props.Repo + '/_config.yml'),
-      { title: this.props.Title }
+      { Title: this.props.Title }
+    )
+  },
+  createBowerJson: function (){
+    this.fs.copyTpl(
+      this.templatePath('bower.json'),
+      this.destinationPath(this.props.Repo + '/bower.json'),
+      this.props
     )
   },
 
   writing: function () {
-    // this.fs.copy(
-    //   this.templatePath('dummyfile.txt'),
-    //   this.destinationPath('dummyfile.txt')
-    // );
-    this.createConfig()
+    this.createConfig();
+    this.createBowerJson();
   },
 
   install: function () {

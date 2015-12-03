@@ -1,0 +1,15 @@
+{
+  "name": "<%= Repo %>",
+  "homepage": "https://github.com/<%= UserOrganization %>/<%= Repo %>",
+  "description": "<%= Slogan %>",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
