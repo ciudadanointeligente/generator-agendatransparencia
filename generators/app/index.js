@@ -13,14 +13,14 @@ module.exports = yeoman.generators.Base.extend({
     ));
 
     var prompts = [
-      {type: 'confirm', name: 'UserOrganization', message: 'Tu usuario u organización en github?', default: 'ciudadanointeligente' },
-      {type: 'confirm', name: 'Repo', message: 'El repo', default: 'a_transparencia' },
-      {type: 'confirm', name: 'Title', message: 'El título?', default: 'Agenda Transparencia' },
-      {type: 'confirm', name: 'Slogan', message: 'El Slogan?', default: 'Todos los perritos se van al cielo' },
-      {type: 'confirm', name: 'ActionCall', message: 'Cual es el llamado a la acción?', default: 'Ayudalos a llegar al cielo' },
-      {type: 'confirm', name: 'AmountOfCards', message: 'Cuantas tarjetas deberían ser?', default: 9 },
-      {type: 'confirm', name: 'Twitter', message: 'ciudadanoi', default: 'Twitter' },
-      {type: 'confirm', name: 'Facebook', message: 'ciudadanointeligente', default: 'Facebook' }
+      {type: 'input', name: 'UserOrganization', message: 'Tu usuario u organización en github?', default: 'ciudadanointeligente' },
+      {type: 'input', name: 'Repo', message: 'El repo', default: 'a_transparencia' },
+      {type: 'input', name: 'Title', message: 'El título?', default: 'Agenda Transparencia' },
+      {type: 'input', name: 'Slogan', message: 'El Slogan?', default: 'Todos los perritos se van al cielo' },
+      {type: 'input', name: 'ActionCall', message: 'Cual es el llamado a la acción?', default: 'Ayudalos a llegar al cielo' },
+      {type: 'input', name: 'AmountOfCards', message: 'Cuantas tarjetas deberían ser?', default: 9 },
+      {type: 'input', name: 'Twitter', message: 'ciudadanoi', default: 'Twitter' },
+      {type: 'input', name: 'Facebook', message: 'ciudadanointeligente', default: 'Facebook' }
     ];
 
     this.prompt(prompts, function (props) {
