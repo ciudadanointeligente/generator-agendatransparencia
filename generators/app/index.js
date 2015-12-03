@@ -19,8 +19,8 @@ module.exports = yeoman.generators.Base.extend({
       {type: 'input', name: 'Slogan', message: 'El Slogan?', default: 'Todos los perritos se van al cielo' },
       {type: 'input', name: 'ActionCall', message: 'Cual es el llamado a la acción?', default: 'Ayudalos a llegar al cielo' },
       {type: 'input', name: 'AmountOfCards', message: 'Cuantas tarjetas deberían ser?', default: 9 },
-      {type: 'input', name: 'Twitter', message: 'ciudadanoi', default: 'Twitter' },
-      {type: 'input', name: 'Facebook', message: 'ciudadanointeligente', default: 'Facebook' }
+      {type: 'input', name: 'Twitter', message: 'Usuario en Twitter', default: 'ciudadanoi' },
+      {type: 'input', name: 'Facebook', message: 'Usuario en Facebook', default: 'ciudadanointeligente' }
     ];
 
     this.prompt(prompts, function (props) {
