@@ -20,7 +20,9 @@ module.exports = yeoman.generators.Base.extend({
       {type: 'input', name: 'ActionCall', message: 'Cual es el llamado a la acción?', default: 'Ayudalos a llegar al cielo' },
       {type: 'input', name: 'AmountOfCards', message: 'Cuantas tarjetas deberían ser?', default: 9 },
       {type: 'input', name: 'Twitter', message: 'Usuario en Twitter', default: 'ciudadanoi' },
-      {type: 'input', name: 'Facebook', message: 'Usuario en Facebook', default: 'ciudadanointeligente' }
+      {type: 'input', name: 'Facebook', message: 'Usuario en Facebook', default: 'ciudadanointeligente' },
+      {type: 'input', name: 'Email', message: 'Email de contacto', default: 'prensa@ciudadanointeligente.org' },
+      {type: 'input', name: 'GoogleAnalitycs', message: 'Código Google Analytics', default: 'UA-12345678-9' }
     ];
 
     this.prompt(prompts, function (props) {
@@ -33,7 +35,7 @@ module.exports = yeoman.generators.Base.extend({
     this.fs.copyTpl(
       this.templatePath('_config.yml'),
       this.destinationPath(this.props.Repo + '/_config.yml'),
-      { Title: this.props.Title }
+      this.props
     )
   },
   createBowerJson: function (){
@@ -53,6 +55,10 @@ module.exports = yeoman.generators.Base.extend({
         context
       )
     }
+  },
+  copyTemplate: function() {
+    this.copy(this.templatePath('template/index.html'), this.destinationPath(this.props.Repo + '/index.html')),
+    this.copy(this.templatePath('template/_layouts/default.html'), this.destinationPath(this.props.Repo + '/_layouts/default.html'))
   },
 
   writing: function () {
