@@ -1,15 +1,19 @@
 # site settings
 title: '<%= Title %>'
 email: '<%= Email %>'
-description: 'Mauris facilisis fringilla elit, nec dapibus diam. Praesent sodales tortor eu risus elementum dignissim. Nunc feugiat quam sed orci tincidunt faucibus.'
-baseurl: '//argentina.agendatransparencia.cl' #example: '/agendatransparencia'
-basedomain: argentina.agendatransparencia.cl #ciudadanointeligente.github.io
+description: '<%= SiteDescription %>'
+baseurl: '//<%= BaseUrl %>'
+basedomain: '<%= BaseUrl %>'
 analytics: '<%= GoogleAnalitycs %>'
 
+txt_intro_blue: '<%= IntroOne %>'
+txt_intro_orange: '<%= IntroTwo %>'
+txt_slogan: '<%= ActionCall %>'
+
 # social
-hashtags: AgendaTransparencia
+hashtags: '<%= Hashtags %>'
 twitter_username: <%= Twitter %>
-twitter_txt: 'Maecenas purus neque, laoreet in lectus eget. '
+twitter_txt: '<%= DefaultTwitt %>'
 
 #github
 github_repo: '//github.com/<%= UserOrganization %>/<%= Repo %>'

@@ -7,7 +7,7 @@ importance:
   - txt: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
   - txt: Aenean interdum vel neque nec tempus.
   - txt: 'Cras consectetur lectus suscipit, "efficitur nulla sit amet", convallis eros. Mauris sem lacus, varius nec dui vitae, suscipit vehicula sem.'
-  - txt: Esto lo puedes modificar en [Github](//github.com/<%= UserOrganization %>/<%= Repo %>/blob/gh-pages/_cards/card-<%= id %>.md)
+  - txt: Esto lo puedes modificar en [Github](https://github.com/<%= UserOrganization %>/<%= Repo %>/blob/gh-pages/_cards/card-<%= id %>.md)
 proposals:
   - txt: Donec sed felis viverra velit placerat maximus.
   - txt: Pellentesque ut ligula sit amet turpis sollicitudin dignissim in sit amet tellus.
