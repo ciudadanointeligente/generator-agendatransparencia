@@ -2,8 +2,8 @@
 title: '<%= Title %>'
 email: '<%= Email %>'
 description: '<%= SiteDescription %>'
-baseurl: '//<%= BaseUrl %>'
-basedomain: '<%= BaseUrl %>'
+baseurl: '//<%= UserOrganization %>.github.io/<%= Repo %>'
+basedomain: '<%= UserOrganization %>.github.io/<%= Repo %>'
 analytics: '<%= GoogleAnalitycs %>'
 
 txt_intro_blue: '<%= IntroOne %>'
