@@ -23,7 +23,7 @@ module.exports = yeoman.generators.Base.extend({
       {type: 'input', name: 'ActionCall', message: 'Cual es el llamado a la acción?', default: 'Ayúdanos a viralizarlos!' },
       {type: 'input', name: 'AmountOfCards', validate: function (input) {
         if (isNaN(parseInt(input))) {
-          return "Necesitas ingresar un número";
+          return 'Necesitas ingresar un número';
         }
         return true;
       }, filter: function (input) {
@@ -109,11 +109,13 @@ module.exports = yeoman.generators.Base.extend({
     });
   },
   end: function () {
-    this.spawnCommand('git', ['init']);
-    this.spawnCommand('git', ['checkout', '-b', 'gh-pages']);
-    this.spawnCommand('git', ['remote', 'add', 'origin', this.repo]);
-    this.spawnCommand('git', ['add', '--all']);
-    this.spawnCommand('git', ['commit', '-m', '"initial commit from generator"']);
+    var gulp = this;
+    gulp.spawnCommand('git', ['init']);
+    gulp.spawnCommand('git', ['checkout', '-b', 'gh-pages']);
+    gulp.spawnCommand('git', ['remote', 'add', 'origin', this.repo]);
+    gulp.spawnCommand('git', ['add', '--all']).on('close', function () {
+      gulp.spawnCommand('git', ['commit', '-am', 'initial commit']);
+    });
   }
 
 });
