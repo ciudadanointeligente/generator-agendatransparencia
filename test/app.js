@@ -2,7 +2,7 @@
 var path = require('path');
 var assert = require('yeoman-assert');
 var helpers = require('yeoman-generator').test;
-var open = require('nodegit').Repository.open;
+
 
 describe('generator-agendatransparencia:app', function () {
   before(function (done) {
@@ -44,6 +44,7 @@ describe('generator-agendatransparencia:app', function () {
     ]);
   });
   it('hace un commit', function (done) {
+    var open = require('nodegit').Repository.open;
     open('a_transparencia').then(function (repo) {
       repo.getBranchCommit('gh-pages', function () {
         done();
