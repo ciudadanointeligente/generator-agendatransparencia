@@ -21,7 +21,14 @@ module.exports = yeoman.generators.Base.extend({
       {type: 'input', name: 'IntroOne', message: 'Texto introducción primario', default: 'Estas son las 9 propuestas' },
       {type: 'input', name: 'IntroTwo', message: 'Texto introducción secundario', default: 'para lograr nuestros objetivos' },
       {type: 'input', name: 'ActionCall', message: 'Cual es el llamado a la acción?', default: 'Ayúdanos a viralizarlos!' },
-      {type: 'input', name: 'AmountOfCards', message: 'Cuantas tarjetas deberían ser?', default: 9 },
+      {type: 'input', name: 'AmountOfCards', validate: function (input) {
+        if (isNaN(parseInt(input))) {
+          return "Necesitas ingresar un número";
+        }
+        return true;
+      }, filter: function (input) {
+        return parseInt(input);
+      }, message: 'Cuantas tarjetas deberían ser?', default: 9 },
       {type: 'input', name: 'Twitter', message: 'Usuario en Twitter', default: 'ciudadanoi' },
       {type: 'input', name: 'Hashtags', message: 'Hashtags (separados por comas)', default: 'AgendaTransparencia' },
       {type: 'input', name: 'DefaultTwitt', message: 'Texto twitt', default: 'Maecenas purus neque, laoreet in lectus eget. ' },
