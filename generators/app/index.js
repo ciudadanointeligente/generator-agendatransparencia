@@ -32,7 +32,6 @@ module.exports = yeoman.generators.Base.extend({
 
     this.prompt(prompts, function (props) {
       this.props = props;
-      // To access props later use this.props.someOption;
       done();
     }.bind(this));
   },
@@ -63,7 +62,6 @@ module.exports = yeoman.generators.Base.extend({
   },
   copyTemplate: function() {
     //_includes
-    this.copy(this.templatePath('template/_includes/card.html'), this.destinationPath(this.props.Repo + '/_includes/card.html')),
     this.copy(this.templatePath('template/_includes/footer.html'), this.destinationPath(this.props.Repo + '/_includes/footer.html')),
     this.copy(this.templatePath('template/_includes/head-tw.html'), this.destinationPath(this.props.Repo + '/_includes/head-tw.html')),
     this.copy(this.templatePath('template/_includes/head.html'), this.destinationPath(this.props.Repo + '/_includes/head.html')),
@@ -89,6 +87,7 @@ module.exports = yeoman.generators.Base.extend({
     //
     this.copy(this.templatePath('template/index.html'), this.destinationPath(this.props.Repo + '/index.html')),
     this.copy(this.templatePath('template/quienes-somos.md'), this.destinationPath(this.props.Repo + '/quienes-somos.md'))
+    console.log('oli')
   },
 
   writing: function () {
