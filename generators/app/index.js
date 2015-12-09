@@ -40,54 +40,53 @@ module.exports = yeoman.generators.Base.extend({
       this.templatePath('_config.yml'),
       this.destinationPath(this.props.Repo + '/_config.yml'),
       this.props
-    )
+    );
   },
   createBowerJson: function (){
     this.fs.copyTpl(
       this.templatePath('bower.json'),
       this.destinationPath(this.props.Repo + '/bower.json'),
       this.props
-    )
+    );
   },
-  createCards: function() {
-    for (var i=1; i < this.props.AmountOfCards + 1; i++) {
+  createCards: function () {
+    for (var i = 1; i < this.props.AmountOfCards + 1; i++) {
       var context = this.props;
       context.id = i;
       this.fs.copyTpl(
         this.templatePath('_cards/card.md'),
-        this.destinationPath(this.props.Repo + '/_cards/card-' + i + ".md"),
+        this.destinationPath(this.props.Repo + '/_cards/card-' + i + '.md'),
         context
-      )
+      );
     }
   },
-  copyTemplate: function() {
+  copyTemplate: function () {
     //_includes
-    this.copy(this.templatePath('template/_includes/footer.html'), this.destinationPath(this.props.Repo + '/_includes/footer.html')),
-    this.copy(this.templatePath('template/_includes/head-tw.html'), this.destinationPath(this.props.Repo + '/_includes/head-tw.html')),
-    this.copy(this.templatePath('template/_includes/head.html'), this.destinationPath(this.props.Repo + '/_includes/head.html')),
-    this.copy(this.templatePath('template/_includes/header.html'), this.destinationPath(this.props.Repo + '/_includes/header.html')),
-    this.copy(this.templatePath('template/_includes/modal.html'), this.destinationPath(this.props.Repo + '/_includes/modal.html')),
-    this.copy(this.templatePath('template/_includes/quienes-somos.md'), this.destinationPath(this.props.Repo + '/_includes/quienes-somos.md')),
-    this.copy(this.templatePath('template/_includes/social.html'), this.destinationPath(this.props.Repo + '/_includes/social.html')),
+    this.copy(this.templatePath('template/_includes/footer.html'), this.destinationPath(this.props.Repo + '/_includes/footer.html'));
+    this.copy(this.templatePath('template/_includes/head-tw.html'), this.destinationPath(this.props.Repo + '/_includes/head-tw.html'));
+    this.copy(this.templatePath('template/_includes/head.html'), this.destinationPath(this.props.Repo + '/_includes/head.html'));
+    this.copy(this.templatePath('template/_includes/header.html'), this.destinationPath(this.props.Repo + '/_includes/header.html'));
+    this.copy(this.templatePath('template/_includes/modal.html'), this.destinationPath(this.props.Repo + '/_includes/modal.html'));
+    this.copy(this.templatePath('template/_includes/quienes-somos.md'), this.destinationPath(this.props.Repo + '/_includes/quienes-somos.md'));
+    this.copy(this.templatePath('template/_includes/social.html'), this.destinationPath(this.props.Repo + '/_includes/social.html'));
     //_layouts
-    this.copy(this.templatePath('template/_layouts/default.html'), this.destinationPath(this.props.Repo + '/_layouts/default.html')),
-    this.copy(this.templatePath('template/_layouts/card-view.html'), this.destinationPath(this.props.Repo + '/_layouts/card-view.html')),
+    this.copy(this.templatePath('template/_layouts/default.html'), this.destinationPath(this.props.Repo + '/_layouts/default.html'));
+    this.copy(this.templatePath('template/_layouts/card-view.html'), this.destinationPath(this.props.Repo + '/_layouts/card-view.html'));
     //_sass
-    this.copy(this.templatePath('template/_sass/_base.scss'), this.destinationPath(this.props.Repo + '/_sass/_base.scss')),
-    this.copy(this.templatePath('template/_sass/_layout.scss'), this.destinationPath(this.props.Repo + '/_sass/_layout.scss')),
-    this.copy(this.templatePath('template/_sass/_my-custom-settings.scss'), this.destinationPath(this.props.Repo + '/_sass/_my-custom-settings.scss')),
-    this.copy(this.templatePath('template/_sass/_syntax-highlighting.scss'), this.destinationPath(this.props.Repo + '/_sass/_syntax-highlighting.scss')),
+    this.copy(this.templatePath('template/_sass/_base.scss'), this.destinationPath(this.props.Repo + '/_sass/_base.scss'));
+    this.copy(this.templatePath('template/_sass/_layout.scss'), this.destinationPath(this.props.Repo + '/_sass/_layout.scss'));
+    this.copy(this.templatePath('template/_sass/_my-custom-settings.scss'), this.destinationPath(this.props.Repo + '/_sass/_my-custom-settings.scss'));
+    this.copy(this.templatePath('template/_sass/_syntax-highlighting.scss'), this.destinationPath(this.props.Repo + '/_sass/_syntax-highlighting.scss'));
     //css
-    this.copy(this.templatePath('template/css/main.scss'), this.destinationPath(this.props.Repo + '/css/main.scss')),
+    this.copy(this.templatePath('template/css/main.scss'), this.destinationPath(this.props.Repo + '/css/main.scss'));
     //js
-    this.copy(this.templatePath('template/js/controller.js'), this.destinationPath(this.props.Repo + '/js/controller.js')),
-    this.copy(this.templatePath('template/js/imagesloaded.pkgd.js'), this.destinationPath(this.props.Repo + '/js/imagesloaded.pkgd.js')),
-    this.copy(this.templatePath('template/js/js.cookie.js'), this.destinationPath(this.props.Repo + '/js/js.cookie.js')),
-    this.copy(this.templatePath('template/js/masonry.pkgd.min.js'), this.destinationPath(this.props.Repo + '/js/masonry.pkgd.min.js')),
+    this.copy(this.templatePath('template/js/controller.js'), this.destinationPath(this.props.Repo + '/js/controller.js'));
+    this.copy(this.templatePath('template/js/imagesloaded.pkgd.js'), this.destinationPath(this.props.Repo + '/js/imagesloaded.pkgd.js'));
+    this.copy(this.templatePath('template/js/js.cookie.js'), this.destinationPath(this.props.Repo + '/js/js.cookie.js'));
+    this.copy(this.templatePath('template/js/masonry.pkgd.min.js'), this.destinationPath(this.props.Repo + '/js/masonry.pkgd.min.js'));
     //
-    this.copy(this.templatePath('template/index.html'), this.destinationPath(this.props.Repo + '/index.html')),
-    this.copy(this.templatePath('template/quienes-somos.md'), this.destinationPath(this.props.Repo + '/quienes-somos.md'))
-    console.log('oli')
+    this.copy(this.templatePath('template/index.html'), this.destinationPath(this.props.Repo + '/index.html'));
+    this.copy(this.templatePath('template/quienes-somos.md'), this.destinationPath(this.props.Repo + '/quienes-somos.md'));
   },
 
   writing: function () {

@@ -2,7 +2,7 @@
 var path = require('path');
 var assert = require('yeoman-assert');
 var helpers = require('yeoman-generator').test;
-var open = require("nodegit").Repository.open;
+var open = require('nodegit').Repository.open;
 
 describe('generator-agendatransparencia:app', function () {
   before(function (done) {
@@ -23,7 +23,7 @@ describe('generator-agendatransparencia:app', function () {
           Facebook: 'ciudadanointeligente_TEST_TEST_TEST',
           Email: 'prensa@ciudadanointeligente.org_TEST_TEST_TEST',
           GoogleAnalitycs: 'UA-12345678-9_TEST_TEST_TEST'
-        }).on('end', function(){
+        }).on('end', function () {
           process.chdir(process.cwd() + '/..');
           done();
         });
@@ -31,11 +31,7 @@ describe('generator-agendatransparencia:app', function () {
   it('creates files', function () {
     assert.file([
       'a_transparencia/_config.yml',
-      'a_transparencia/bower.json',
-      // 'a_transparencia/favicon.ico',
-      // 'a_transparencia/meme.html',
-      // 'a_transparencia/quienes-somos.md',
-
+      'a_transparencia/bower.json'
     ]);
   });
   it('crea 5 cards', function () {
@@ -46,12 +42,12 @@ describe('generator-agendatransparencia:app', function () {
       'a_transparencia/_cards/card-4.md',
       'a_transparencia/_cards/card-5.md'
     ]);
-  })
+  });
   it('hace un commit', function (done) {
-    open('a_transparencia').then(function(repo){
-      branch = repo.getBranchCommit('gh-pages', function (a, commit) {
-        done()
-      })
+    open('a_transparencia').then(function (repo) {
+      repo.getBranchCommit('gh-pages', function () {
+        done();
+      });
     });
   });
 });
