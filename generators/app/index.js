@@ -69,6 +69,7 @@ module.exports = yeoman.generators.Base.extend({
   },
   copyTemplate: function () {
     //_includes
+    this.copy(this.templatePath('template/_includes/card.html'), this.destinationPath(this.props.Repo + '/_includes/card.html'));
     this.copy(this.templatePath('template/_includes/footer.html'), this.destinationPath(this.props.Repo + '/_includes/footer.html'));
     this.copy(this.templatePath('template/_includes/head-tw.html'), this.destinationPath(this.props.Repo + '/_includes/head-tw.html'));
     this.copy(this.templatePath('template/_includes/head.html'), this.destinationPath(this.props.Repo + '/_includes/head.html'));
