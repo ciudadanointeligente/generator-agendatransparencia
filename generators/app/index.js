@@ -87,6 +87,9 @@ module.exports = yeoman.generators.Base.extend({
     this.copy(this.templatePath('template/_sass/_syntax-highlighting.scss'), this.destinationPath(this.props.Repo + '/_sass/_syntax-highlighting.scss'));
     //css
     this.copy(this.templatePath('template/css/main.scss'), this.destinationPath(this.props.Repo + '/css/main.scss'));
+    //img
+    this.copy(this.templatePath('template/img/logo.png'), this.destinationPath(this.props.Repo + '/img/logo.png'));
+    this.copy(this.templatePath('template/img/logo-ciudadanoi.png'), this.destinationPath(this.props.Repo + '/img/logo-ciudadanoi.png'));
     //js
     this.copy(this.templatePath('template/js/controller.js'), this.destinationPath(this.props.Repo + '/js/controller.js'));
     this.copy(this.templatePath('template/js/imagesloaded.pkgd.js'), this.destinationPath(this.props.Repo + '/js/imagesloaded.pkgd.js'));

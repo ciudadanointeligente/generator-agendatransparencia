@@ -1,19 +1,8 @@
 
 # ¿Quiénes somos?
 
-Somos un grupo de organizaciones de la sociedad civil compuesto por la  [Asociación Civil por la Igualdad y la Justicia (ACIJ)](http://www.acij.org.ar), la [Asociación por los Derechos Civiles (ADC)](http://www.adc.org.ar), la [Fundación Directorio Legislativo](http://www.directoriolegislativo.org) y [Poder Ciudadano](http://www.poderciudadano.org), que trabajamos desde hace años promoviendo la transparencia, el acceso a la información pública, la participación ciudadana y la rendición de cuentas del Estado, cuestiones fundamentales para nuestra democracia.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et dapibus eros. Ut pharetra quam lectus, eget dignissim est mollis ac. Curabitur mauris libero, condimentum vitae dui sed, faucibus pharetra elit. Cras fermentum pulvinar orci vel commodo. Duis suscipit sit amet lacus ut finibus. Nam elementum sodales ligula, vitae pulvinar lorem faucibus a. Aliquam et tempus purus.
 
-Consideramos que es indispensable emprender reformas sustantivas en el sistema integral de transparencia de nuestro país. En ese marco, es esencial la aprobación de una ley nacional de acceso a la información pública, como también la promoción de iniciativas orientadas a transparentar y fortalecer el sistema de justicia, los organismos de control y las prácticas de contratación y empleo público de los distintos niveles de gobierno. Contar con gobiernos abiertos, transparentes y que rindan cuentas a la ciudadanía es un paso necesario para fortalecer las instituciones democráticas, dotarlas de mayor legitimidad y confianza pública, y contribuir a la construcción de una sociedad verdaderamente inclusiva e igualitaria en el marco de un Estado de derecho.
+Vestibulum pharetra et lorem at malesuada. Phasellus ac neque vitae turpis facilisis vulputate. Curabitur euismod tempus lectus quis volutpat. Mauris consequat elit porta semper condimentum. Donec fringilla fringilla ligula, eu egestas odio euismod a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla nec varius ante. Proin at odio ac urna molestie ornare ac at lacus. Quisque vel ante risus. Proin sodales volutpat metus, at mollis tellus ultrices quis. Donec scelerisque cursus tellus. Nam sem tellus, fringilla ut ligula ut, mattis luctus metus. Ut id aliquet ipsum. Phasellus finibus, ex eu ornare suscipit, erat dolor pretium odio, et pretium lorem nulla vel velit. Proin in justo pretium metus pellentesque commodo sit amet non sapien. Suspendisse eu tincidunt ipsum.
 
-Las 12 propuestas que presentamos son aquellas que consideramos prioritarias para la consolidación y fortalecimiento de nuestra democracia, y configuran una hoja de ruta para que el gobierno entrante lleve adelante políticas públicas en ese sentido. La selección de estos asuntos responde a la urgencia y el carácter impostergable de su tratamiento, pero no excluye otras reformas necesarias en materia de institucionalidad, transparencia y acceso a la información pública.
-
-
-
-
-
-<ul class="list-inline">
-	<li><img src="{{ site.baseurl }}/img/logos-ata/ACIJ_logo.jpg"></li>
-	<li><img src="{{ site.baseurl }}/img/logos-ata/ADC_logo.jpg"></li>
-	<li><img src="{{ site.baseurl }}/img/logos-ata/FDL_logo.PNG"></li>
-	<li><img src="{{ site.baseurl }}/img/logos-ata/PC_logo.jpg"></li>
-</ul>
+Praesent tincidunt lacus arcu, venenatis facilisis mi interdum et. Maecenas posuere laoreet varius. Donec maximus diam id nibh mattis, eget tincidunt dolor porttitor. Mauris sit amet turpis eu orci bibendum vehicula a id justo. Sed massa ipsum, auctor sed lorem sed, efficitur volutpat odio. Ut rutrum, diam ac faucibus condimentum, lectus felis varius quam, quis laoreet turpis elit et ligula. Pellentesque eu urna lacinia, tincidunt enim quis, cursus dui. Praesent vitae felis sit amet tortor fringilla scelerisque. Ut ultricies pharetra nisl quis laoreet. Vestibulum eget lectus diam.
