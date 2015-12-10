@@ -16,7 +16,7 @@ describe('generator-agendatransparencia:app', function () {
           IntroOne: 'Estas son las 9 propuestas_TEST_TEST_TEST',
           IntroTwo: 'para lograr nuestros objetivos_TEST_TEST_TEST',
           ActionCall: 'Ayúdanos a viralizarlos_TEST_TEST_TEST!',
-          AmountOfCards: 5,
+          AmountOfCards: '5',
           Twitter: 'ciudadanoi_TEST_TEST_TEST',
           Hashtags: 'AgendaTransparencia_TEST_TEST_TEST',
           DefaultTwitt: 'Maecenas purus neque, laoreet in lectus eget. _TEST_TEST_TEST',
