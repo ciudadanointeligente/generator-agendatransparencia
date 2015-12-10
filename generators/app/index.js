@@ -69,6 +69,8 @@ module.exports = yeoman.generators.Base.extend({
   },
   copyTemplate: function () {
     //_includes
+    this.copy(this.templatePath('gulpfile.js'), this.destinationPath(this.props.Repo + '/gulpfile.js'));
+    this.copy(this.templatePath('package.json'), this.destinationPath(this.props.Repo + '/package.json'));
     this.copy(this.templatePath('template/_includes/card.html'), this.destinationPath(this.props.Repo + '/_includes/card.html'));
     this.copy(this.templatePath('template/_includes/footer.html'), this.destinationPath(this.props.Repo + '/_includes/footer.html'));
     this.copy(this.templatePath('template/_includes/head-tw.html'), this.destinationPath(this.props.Repo + '/_includes/head-tw.html'));
@@ -108,11 +110,7 @@ module.exports = yeoman.generators.Base.extend({
   install: function () {
     var elementDir = process.cwd() + '/' + this.props.Repo;
     process.chdir(elementDir);
-    this.installDependencies({
-      npm: false
-    });
-  },
-  end: function () {
+    this.installDependencies();
     var gulp = this;
     gulp.spawnCommand('git', ['init']);
     gulp.spawnCommand('git', ['checkout', '-b', 'gh-pages']);
@@ -120,6 +118,11 @@ module.exports = yeoman.generators.Base.extend({
     gulp.spawnCommand('git', ['add', '--all']).on('close', function () {
       gulp.spawnCommand('git', ['commit', '-am', 'initial commit']);
     });
+  },
+  end: function () {
+    this.log(chalk.blue.underline.bold('Estamos casi listos!!!!!'));
+    this.log('Ahora debes hacer: ' +chalk.blue.bgRed.bold('cd ' + this.props.Repo + ' && gulp'));
+    this.log(chalk.red('Y abrir tu navegador en la dirección: ', chalk.underline.bgBlue('http://localhost:4000/')));
   }
 
 });
