@@ -43,4 +43,9 @@ describe('generator-agendatransparencia:app', function () {
       'a_transparencia/_cards/card-5.md'
     ]);
   });
+  it('hace un git init', function () {
+    assert.file([
+      'a_transparencia/.git/'
+    ]);
+  });
 });
