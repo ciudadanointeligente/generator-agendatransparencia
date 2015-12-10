@@ -1,0 +1,26 @@
+# site settings
+title: '<%= Title %>'
+email: '<%= Email %>'
+description: '<%= SiteDescription %>'
+baseurl: '//<%= UserOrganization %>.github.io/<%= Repo %>'
+basedomain: '<%= UserOrganization %>.github.io/<%= Repo %>'
+analytics: '<%= GoogleAnalitycs %>'
+
+txt_intro_blue: '<%= IntroOne %>'
+txt_intro_orange: '<%= IntroTwo %>'
+txt_slogan: '<%= ActionCall %>'
+
+# social
+hashtags: '<%= Hashtags %>'
+twitter_username: <%= Twitter %>
+twitter_txt: '<%= DefaultTwitt %>'
+
+#github
+github_repo: '//github.com/<%= UserOrganization %>/<%= Repo %>'
+
+# build settings
+markdown: kramdown
+
+collections:
+  cards:
+    output: true
