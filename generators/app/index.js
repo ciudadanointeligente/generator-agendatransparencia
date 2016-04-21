@@ -100,6 +100,7 @@ module.exports = yeoman.generators.Base.extend({
     //
     this.copy(this.templatePath('template/index.html'), this.destinationPath(this.props.Repo + '/index.html'));
     this.copy(this.templatePath('template/quienes-somos.md'), this.destinationPath(this.props.Repo + '/quienes-somos.md'));
+    this.copy(this.templatePath('template/.gitignore'), this.destinationPath(this.props.Repo + '/.gitignore'));
   },
 
   writing: function () {
