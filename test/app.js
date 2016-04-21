@@ -43,12 +43,9 @@ describe('generator-agendatransparencia:app', function () {
       'a_transparencia/_cards/card-5.md'
     ]);
   });
-  it('hace un commit', function (done) {
-    var open = require('nodegit').Repository.open;
-    open('a_transparencia').then(function (repo) {
-      repo.getBranchCommit('gh-pages', function () {
-        done();
-      });
-    });
+  it('hace un git init', function () {
+    assert.file([
+      'a_transparencia/.git/'
+    ]);
   });
 });

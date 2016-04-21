@@ -16,9 +16,15 @@ Then generate your new project:
 yo agendatransparencia
 ```
 
-## Getting To Know Yeoman
+## Getting to know AgendaTransparencia
 
-Yeoman has a heart of gold. He&#39;s a person with feelings and opinions, but he&#39;s very easy to work with. If you think he&#39;s too opinionated, he can be easily convinced. Feel free to [learn more about him](http://yeoman.io/).
+This is a generator for sites like
+
+* [AgendaTransparencia de CiudadanoInteligente](http://agendatransparencia.cl)
+* [Decalogo de Propuestas de Transparencia de Civio](http://propuestas.civio.es/)
+
+...
+And in the future the Argentinian version of AgendaTransparencia.
 
 ## License
 

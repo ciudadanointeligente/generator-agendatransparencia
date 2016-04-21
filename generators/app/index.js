@@ -122,7 +122,7 @@ module.exports = yeoman.generators.Base.extend({
   },
   end: function () {
     this.log(chalk.blue.underline.bold('Estamos casi listos!!!!!'));
-    this.log('Ahora debes hacer: ' +chalk.blue.bgRed.bold('cd ' + this.props.Repo + ' && gulp'));
+    this.log('Ahora debes hacer: ' + chalk.blue.bgRed.bold('cd ' + this.props.Repo + ' && gulp'));
     this.log(chalk.red('Y abrir tu navegador en la dirección: ', chalk.underline.bgBlue('http://localhost:4000/')));
   }
 
